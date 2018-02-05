@@ -83,13 +83,13 @@ public class MainController {
     @GetMapping("/add-cosmetic")
     public String cosmeticForm(Model model) {
         model.addAttribute("cosmetic", new Cosmetics());
-        return "jbcstoreform";
+        return "cosmeticform";
     }
 
     @PostMapping("/process-cosmetic")
     public String processCosmeticForm(@Valid Cosmetics cosmetics, BindingResult result) {
         if (result.hasErrors()) {
-            return "jbcstoreform";
+            return "cosmeticform";
         }
         cosmeticsRepository.save(cosmetics);
         return "redirect:/";
@@ -104,7 +104,7 @@ public class MainController {
     @RequestMapping("/update/{cosmeticId}")
     public String updateCosmetic(@PathVariable("cosmeticId")long cosmeticId, Model model) {
         model.addAttribute("cosmetic", cosmeticsRepository.findOne(cosmeticId));
-        return "jbcstoreform";
+        return "cosmeticform";
     }
 
     @RequestMapping("delete/{cosmeticId}")

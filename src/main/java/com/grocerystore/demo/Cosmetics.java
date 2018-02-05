@@ -26,7 +26,7 @@ public class Cosmetics {
 
         @NotNull
         @Size(min=2)
-        private Double cosmeticPrice;
+        private String cosmeticPrice;
 
         @NotNull
         @Size(min=2)
@@ -61,11 +61,11 @@ public class Cosmetics {
             this.cosmeticBrand = cosmeticBrand;
         }
 
-        public Double getCosmeticPrice() {
+        public String getCosmeticPrice() {
             return cosmeticPrice;
         }
 
-        public void setCosmeticPrice(Double cosmeticPrice) {
+        public void setCosmeticPrice(String cosmeticPrice) {
             this.cosmeticPrice = cosmeticPrice;
         }
 

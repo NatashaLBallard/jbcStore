@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Items to List</title>
+</head>
+<body>
+
+
+<!-- Start of Form Entry for Cosmetics -->
+<form action="#"
+      th:action="@{/process-cosmetic}"
+      th:object="${cosmetic}"
+      method="post">
+    <input type="hidden" th:field="*{cosmeticId}" />
+
+    <h2>Cosmetic</h2>
+
+    <em>Name: </em>
+    <input type="text" th:field="*{cosmeticName}" />
+    <span th:if="${#fields.hasErrors('cosmeticName')}"
+          th:errors="*{cosmeticName}"></span><br/>
+
+    <em>Brand: </em>
+    <input type="text" th:field="*{cosmeticBrand}" />
+    <span th:if="${#fields.hasErrors('cosmeticBrand')}"
+          th:errors="*{cosmeticBrand}"></span><br/>
+
+    <em>Price: </em>
+    <input type="text" th:field="*{cosmeticPrice}" />
+    <span th:if="${#fields.hasErrors('cosmeticPrice')}"
+          th:errors="*{cosmeticPrice}"></span><br/>
+
+    <em>Popularity: </em>
+    <input type="text" th:field="*{cosmeticPopularity}" />
+    <span th:if="${#fields.hasErrors('cosmeticPopularity')}"
+          th:errors="*{cosmeticPopularity}"></span><br/>
+
+
+    <input type="submit" value="Submit" />
+</form>
+<!-- End of Form Entry for Cosmetics -->
+<hr/>
+
+
+
+
+
+
+
+
+</body>
+</html>
