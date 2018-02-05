@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Items to List</title>
+</head>
+<body>
+
+
+<!-- Start of Form Entry for JBC Store -->
+<form action="#"
+      th:action="@{/process}"
+      th:object="${jbcStore}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+
+    <h2>General</h2>
+
+    <em>Name of List: </em>
+    <input type="text" th:field="*{jbcStoreListName}" />
+    <span th:if="${#fields.hasErrors('jbcStoreListName')}"
+          th:errors="*{jbcStoreListName}"></span><br/>
+
+    <input type="submit" value="Submit" />
+</form>
+
+<!-- End of Form Entry for JBC Store -->
+<hr/>
+<!-- Start of Form Entry for Cosmetics
+<form action="#"
+      th:action="@{/process-cosmetic}"
+      th:object="${cosmetic}"
+      method="post">
+    <input type="hidden" th:field="*{cosmeticId}" />
+
+    <h2>Cosmetic</h2>
+
+    <em>Name: </em>
+    <input type="text" th:field="*{cosmeticName}" />
+    <span th:if="${#fields.hasErrors('cosmeticName')}"
+          th:errors="*{cosmeticName}"></span><br/>
+
+    <em>Brand: </em>
+    <input type="text" th:field="*{cosmeticBrand}" />
+    <span th:if="${#fields.hasErrors('cosmeticBrand')}"
+          th:errors="*{cosmeticBrand}"></span><br/>
+
+    <em>Price: </em>
+    <input type="text" th:field="*{cosmeticPrice}" />
+    <span th:if="${#fields.hasErrors('cosmeticPrice')}"
+          th:errors="*{cosmeticPrice}"></span><br/>
+
+    <em>Popularity: </em>
+    <input type="text" th:field="*{cosmeticPopularity}" />
+    <span th:if="${#fields.hasErrors('cosmeticPopularity')}"
+          th:errors="*{cosmeticPopularity}"></span><br/>
+
+</form>
+ End of Form Entry for Cosmetics -->
+<hr/>
+<!-- Start of Form Entry for Cleaning Items
+<form action="#"
+      th:action="@{/process-cleaning}"
+      th:object="${cleaning}"
+      method="post">
+    <input type="hidden" th:field="*{cleaningId}" />
+
+    <h2>Cleaning Items</h2>
+
+    <em>Name: </em>
+    <input type="text" th:field="*{cleaningName}" />
+    <span th:if="${#fields.hasErrors('cleaningName')}"
+          th:errors="*{cleaningName}"></span><br/>
+
+    <em>Price: </em>
+    <input type="text" th:field="*{cleaningPrice}" />
+    <span th:if="${#fields.hasErrors('cleaningPrice')}"
+          th:errors="*{cleaningPrice}"></span><br/>
+
+    <em>Strength: </em>
+    <input type="text" th:field="*{cleaningStrength}" />
+    <span th:if="${#fields.hasErrors('cleaningStrength')}"
+          th:errors="*{cleaningStrength}"></span><br/>
+
+</form>
+
+ End of Form Entry for Cosmetics -->
+<hr/>
+<!-- Start of Form Entry for Snacks
+<form action="#"
+      th:action="@{/process-snacks}"
+      th:object="${snacks}"
+      method="post">
+    <input type="hidden" th:field="*{snackId}" />
+
+    <h2>Cleaning Items</h2>
+
+    <em>Name: </em>
+    <input type="text" th:field="*{snackName}" />
+    <span th:if="${#fields.hasErrors('snackName')}"
+          th:errors="*{snackName}"></span><br/>
+
+    <em>Price: </em>
+    <input type="text" th:field="*{snackPrice}" />
+    <span th:if="${#fields.hasErrors('snackPrice')}"
+          th:errors="*{snackPrice}"></span><br/>
+
+    <em>Crunchiness: </em>
+    <input type="text" th:field="*{snackCrunchiness}" />
+    <span th:if="${#fields.hasErrors('snackCrunchiness')}"
+          th:errors="*{snackCrunchiness}"></span><br/>
+
+</form>
+ End of Form Entry for Snacks -->
+<hr/>
+
+
+
+
+
+
+
+</body>
+</html>

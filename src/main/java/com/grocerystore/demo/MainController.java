@@ -25,7 +25,7 @@ public class MainController {
 
     @RequestMapping("/")
     public String listJBCStores(Model model) {
-        model.addAttribute("jbcstorelists", jbcStoreRepository.findAll());
+        model.addAttribute("jbcStoreLists", jbcStoreRepository.findAll());
         return "display";
     }
 
@@ -72,20 +72,20 @@ public class MainController {
     @Autowired
     CosmeticsRepository cosmeticsRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/cosmetic")
     public String listCosmetics(Model model) {
         model.addAttribute("cosmetics", cosmeticsRepository.findAll());
         return "display";
     }
 
-    @GetMapping("/add")
+    @GetMapping("/add-cosmetic")
     public String cosmeticForm(Model model) {
         model.addAttribute("cosmetic", new Cosmetics());
         return "jbcstoreform";
     }
 
-    @PostMapping("/process")
-    public String processForm(@Valid Cosmetics cosmetics, BindingResult result) {
+    @PostMapping("/process-cosmetic")
+    public String processCosmeticForm(@Valid Cosmetics cosmetics, BindingResult result) {
         if (result.hasErrors()) {
             return "jbcstoreform";
         }
@@ -121,20 +121,20 @@ public class MainController {
 @Autowired
 CleaningItemsRepository cleaningItemsRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/cleaning")
     public String listCleaningItems(Model model) {
         model.addAttribute("cleaningitems", cleaningItemsRepository.findAll());
         return "display";
     }
 
-    @GetMapping("/add")
+    @GetMapping("/add-cleaning")
     public String cleaningForm(Model model) {
         model.addAttribute("cleaningitem", new CleaningItems());
         return "jbcstoreform";
     }
 
-    @PostMapping("/process")
-    public String processForm(@Valid CleaningItems cleaningItems, BindingResult result) {
+    @PostMapping("/process-cleaning")
+    public String processCleaningForm(@Valid CleaningItems cleaningItems, BindingResult result) {
         if (result.hasErrors()) {
             return "jbcstoreform";
         }
@@ -170,20 +170,20 @@ CleaningItemsRepository cleaningItemsRepository;
     @Autowired
     SnacksRepository snacksRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/snacks")
     public String listSnacks(Model model) {
         model.addAttribute("snacks", snacksRepository.findAll());
         return "display";
     }
 
-    @GetMapping("/add")
+    @GetMapping("/add-snacks")
     public String snackForm(Model model) {
         model.addAttribute("snack", new Snacks());
         return "jbcstoreform";
     }
 
-    @PostMapping("/process")
-    public String processForm(@Valid Snacks snack, BindingResult result) {
+    @PostMapping("/process-snacks")
+    public String processSnackForm(@Valid Snacks snack, BindingResult result) {
         if (result.hasErrors()) {
             return "jbcstoreform";
         }
