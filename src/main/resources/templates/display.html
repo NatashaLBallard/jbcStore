@@ -12,9 +12,9 @@
 <!--<span th:text="${jbcStoreLists.jbcStoreListName}"></span><br/> -->
 
 
-<div th:each:="jbcStore: ${jbcStoreLists}">
-<p th:text:="${jbcStore.jbcStoreListName}"></p>
-</div>
+<span th:each="jbcStore: ${jbcStoreLists}">
+<p th:text="${jbcStore.jbcStoreListName}"></p>
+</span>
 
 <!--<tr th:each:="jbcStore: ${jbcStoreLists}">
     <td th:text:="${jbcStore.jbcStoreListName}"></td>
