@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    <em><a href="/">Show Items</a></em>
+
+    <h3>Cosmetics</h3>
+    <span th:text="${cosmetic.cosmeticName}"></span></br>
+    <span th:text="${cosmetic.cosmeticBrand}"></span></br>
+    <span th:text="${cosmetic.cosmeticPrice}"></span></br>
+    <span th:text="${cosmetic.cosmeticPopularity}"></span></br>
+    <hr/>
+
+    <h3>Cleaning Items</h3>
+    <span th:text="${cleaningItem.cleaningName}"></span></br>
+    <span th:text="${cleaningItem.cleaningPrice}"></span></br>
+    <span th:text="${cleaningItem.cleaningStrength}"></span></br>
+    <hr/>
+    <h3>Snacks</h3>
+    <span th:text="${snack.snackName}"></span></br>
+    <span th:text="${snack.snackPrice}"></span></br>
+    <span th:text="${snack.snackCrunchiness}"></span></br>
+    <hr/>
+
+
+</body>
+</html>

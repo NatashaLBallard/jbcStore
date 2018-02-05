@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<em><a href="/add">Add Items</a></em>
+<br/><br/>
+
+
+<!--Start of Cosmetics Display Table -->
+
+<h3>Cosmetics</h3>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Popularity</th>
+    </tr>
+
+    <tr th:each="cosmetic: ${cosmetics}">
+        <td th:text="${cosmetic.cosmeticName}"></td>
+        <td th:text="${cosmetic.cosmeticBrand}"></td>
+        <td th:text="${cosmetic.cosmeticPrice}"></td>
+        <td th:text="${cosmetic.cosmeticPopularity}"></td>
+    </tr>
+</table>
+<hr/>
+
+<!--End of Cosmetics Display Table -->
+
+<!--Start of Cleaning Items Display Table -->
+
+<h3>Cleaning Items</h3>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Strength</th>
+    </tr>
+
+    <tr th:each="cleaningItem: ${cleaningItems}">
+        <td th:text="${cleaningItem.cleaningName}"></td>
+        <td th:text="${cleaningItem.cleaningPrice}"></td>
+        <td th:text="${cleaningItem.cleaningStrength}"></td>
+    </tr>
+</table>
+<hr/>
+<!--End  of Cleaning Items Display Table -->
+
+
+<!--Start of Snacks Display Table -->
+
+<h3>Snacks</h3>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Crunchiness</th>
+    </tr>
+
+    <tr th:each="Snack: ${Snacks}">
+        <td th:text="${snack.snackName}"></td>
+        <td th:text="${snack.snackPrice}"></td>
+        <td th:text="${snack.snackCrunchiness}"></td>
+    </tr>
+</table>
+<hr/>
+<!--End  of Snacks Display Table -->
+
+</body>
+</html>
